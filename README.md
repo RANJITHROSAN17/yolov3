@@ -43,7 +43,6 @@ Welcome to the YOLOv3 Object Detection Training repository! This project provide
 - 📈 **Monitoring and Visualization:** Track your training progress with rich visualizations.
 - 🤝 **Community-Driven:** Active contributors and open to collaborations.
 
-📚 For detailed documentation and examples, visit our [Wiki](wiki-link).
 
 <!-- Getting Started Section -->
 ## Getting Started
