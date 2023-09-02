@@ -62,32 +62,91 @@ Make sure you have the following prerequisites installed:
 
 ### Installation
 
-# Check if NVIDIA GPU is enabled
+1. Cheack Gpu :
 ```bash
 !nvidia-smi
 ```
 
-2. Install the required packages:
+2. Mount Google drive :
 ```bash
-pip install -r requirements.txt
+from google.colab import drive
+drive.mount('/content/gdrive')
 ```
 
-3. Download the YOLOv3 weights:
+3. Clone, configure & compile Darknet:
 ```bash
-./download_weights.sh
+!git clone https://github.com/AlexeyAB/darknet
 ```
 
-4. Start training your model:
+#Configure
 ```bash
-python train.py --config config/yolov3.cfg --data data/custom.data
+%cd darknet
+!sed -i 's/OPENCV=0/OPENCV=1/' Makefile
+!sed -i 's/GPU=0/GPU=1/' Makefile
+!sed -i 's/CUDNN=0/CUDNN=1/' Makefile
 ```
-🎉 That's it! You're ready to train your custom YOLOv3 model.
+#Compile
+!make
 
-<!-- Usage Section -->
-Usage
-Explain how to use your project and provide code examples. Include screenshots or GIFs if possible.
+4. Configure yolov3.cfg file:
+# Make a copy of yolov3.cfg
+```bash
+!cp cfg/yolov3.cfg cfg/yolov3_training.cfg
+```
+
+# Change lines in yolov3.cfg file
+```bash
+!sed -i 's/batch=1/batch=64/' cfg/yolov3_training.cfg
+!sed -i 's/subdivisions=1/subdivisions=16/' cfg/yolov3_training.cfg
+!sed -i 's/max_batches = 500200/max_batches = 4000/' cfg/yolov3_training.cfg
+!sed -i '610 s@classes=80@classes=2@' cfg/yolov3_training.cfg
+!sed -i '696 s@classes=80@classes=2@' cfg/yolov3_training.cfg
+!sed -i '783 s@classes=80@classes=2@' cfg/yolov3_training.cfg
+!sed -i '603 s@filters=255@filters=21@' cfg/yolov3_training.cfg
+!sed -i '689 s@filters=255@filters=21@' cfg/yolov3_training.cfg
+!sed -i '776 s@filters=255@filters=21@' cfg/yolov3_training.cfg
+```
+
+5. Create .names and .data files:
+```bash
+!echo -e 'job\nbeam_number' > data/obj.names
+!echo -e 'classes= 2\ntrain  = data/train.txt\nvalid  = data/test.txt\nnames = data/obj.names\nbackup = /content/weight' > data/obj.data
+```
+
+6.  Save yolov3_training.cfg and obj.names files in Google drive:
+```bash
+!mkdir /content/gdrive/MyDrive/Yolo_v3/yolov3_testing.cfg
+!mkdir /content/gdrive/MyDrive/Yolo_v3/classes.txt
+```
 
 ```bash
-python detect.py --image your-image.jpg --weights weights/yolov3.pth
+!cp cfg/yolov3_training.cfg /content/gdrive/MyDrive/Yolo_v3/yolov3_testing.cfg
+!cp data/obj.names /content/gdrive/MyDrive/Yolo_v3/classes.txt
+```
+
+7. Create a folder and unzip image dataset:
+```bash
+!mkdir data/obj
+!unzip /content/gdrive/MyDrive/ocr_ds.zip -d data/obj
+```
+
+8. Create train.txt file:
+```bash
+import glob
+images_list = glob.glob("data/obj/ocr_ds/*.jpg")
+with open("data/train.txt", "w") as f:
+    f.write("\n".join(images_list))
+```
+
+9. Download pre-trained weights for the convolutional layers file:
+```bash
+!wget https://pjreddie.com/media/files/darknet53.conv.74
+```
+
+10. Start training:
+```bash
+!./darknet detector train data/obj.data cfg/yolov3_training.cfg darknet53.conv.74 -dont_show
+# Uncomment below and comment above to re-start your training from last saved weights
+#!./darknet detector train data/obj.data cfg/yolov3_training.cfg /mydrive/yolov3/yolov3_training_last.weights -dont_show
 ```
 
