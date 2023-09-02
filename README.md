@@ -7,14 +7,14 @@
 
 <!-- Shields -->
 <p align="center">
-  <a href="https://github.com/your-username/your-repo/stargazers">
-    <img src="https://img.shields.io/github/stars/your-username/your-repo?style=for-the-badge" alt="Stars">
+  <a href="https://github.com/RANJITHROSAN17/yolov3/stargazers">
+    <img src="https://img.shields.io/github/stars/RANJITHROSAN17/yolov3?style=for-the-badge" alt="Stars">
   </a>
-  <a href="https://github.com/your-username/your-repo/issues">
-    <img src="https://img.shields.io/github/issues/your-username/your-repo?style=for-the-badge" alt="Issues">
+  <a href="https://github.com/RANJITHROSAN17/yolov3/issues">
+    <img src="https://img.shields.io/github/issues/RANJITHROSAN17/yolov3?style=for-the-badge" alt="Issues">
   </a>
-  <a href="https://github.com/your-username/your-repo/network/members">
-    <img src="https://img.shields.io/github/forks/your-username/your-repo?style=for-the-badge" alt="Forks">
+  <a href="https://github.com/RANJITHROSAN17/yolov3/network/members">
+    <img src="https://img.shields.io/github/forks/RANJITHROSAN17/yolov3?style=for-the-badge" alt="Forks">
   </a>
 </p>
 
@@ -69,8 +69,8 @@ Make sure you have the following prerequisites installed:
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
+git clone https://github.com/RANJITHROSAN17/yolov3.git
+cd yolov3
 ```
 
 2. Install the required packages:
