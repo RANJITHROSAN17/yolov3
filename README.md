@@ -62,11 +62,9 @@ Make sure you have the following prerequisites installed:
 
 ### Installation
 
-1. Clone this repository:
-
+# Check if NVIDIA GPU is enabled
 ```bash
-git clone https://github.com/RANJITHROSAN17/yolov3.git
-cd yolov3
+!nvidia-smi
 ```
 
 2. Install the required packages:
