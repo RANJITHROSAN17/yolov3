@@ -76,15 +76,17 @@ cd your-repo
 2. Install the required packages:
 ```bash
 pip install -r requirements.txt
+```
 
 3. Download the YOLOv3 weights:
 ```bash
 ./download_weights.sh
+```
 
 4. Start training your model:
 ```bash
 python train.py --config config/yolov3.cfg --data data/custom.data
-
+```
 🎉 That's it! You're ready to train your custom YOLOv3 model.
 
 <!-- Usage Section -->
