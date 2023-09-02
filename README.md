@@ -71,6 +71,7 @@ Make sure you have the following prerequisites installed:
 ```bash
 git clone https://github.com/your-username/your-repo.git
 cd your-repo
+```
 
 2. Install the required packages:
 ```bash
