@@ -1,10 +1,6 @@
 <!-- Project Title -->
 <h1 align="center">YOLOv3 Object Detection Training</h1>
 
-<p align="center">
-  <img src="your-logo.png" alt="Project Logo" width="300" height="300">
-</p>
-
 <!-- Shields -->
 <p align="center">
   <a href="https://github.com/RANJITHROSAN17/yolov3/stargazers">
@@ -93,14 +89,7 @@ python train.py --config config/yolov3.cfg --data data/custom.data
 Usage
 Explain how to use your project and provide code examples. Include screenshots or GIFs if possible.
 
-python
-Copy code
+```bash
 python detect.py --image your-image.jpg --weights weights/yolov3.pth
-Detection Example
+```
 
-<!-- Contributing Section -->
-Contributing
-👍 Contributions are welcome! Please read CONTRIBUTING.md for details on how to contribute to this project.
-
-<!-- License Section -->
-License
