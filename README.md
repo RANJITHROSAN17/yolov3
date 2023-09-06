@@ -1,6 +1,10 @@
 <!-- Project Title -->
 <h1 align="center">YOLOv3 Object Detection Training In Google Colab</h1>
 
+<p align="center">
+  <img src="https://media.giphy.com/media/42wQXwITfQbDGKqUP7/giphy.gif">
+</p>
+
 <!-- Shields -->
 <p align="center">
   <a href="https://github.com/RANJITHROSAN17/yolov3/stargazers">
