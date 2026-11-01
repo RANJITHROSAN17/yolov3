@@ -51,3 +51,7 @@ flowchart TD
 ](05_training_process_.md)
 
 ---
+
+## Maintainer
+
+**[Ranjith Rosan](https://github.com/RANJITHROSAN17)** maintains this custom-dataset YOLOv3 training tutorial. YOLOv3, Darknet and their model weights are upstream work and retain their original authorship and license terms.
