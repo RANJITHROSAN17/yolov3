@@ -1,5 +1,7 @@
 # Chapter 4: Darknet Framework
 
+> **Historical reference:** The examples in this chapter describe an older two-class notebook and may be incomplete or unsafe to copy verbatim. Use the [current notebook](YOLOv3_Object_Detection.py.ipynb) and [README](README.md) for the maintained, configurable workflow and validation steps.
+
 Welcome back! So far in our journey, we've set up our powerful cloud workspace in [Chapter 1: Google Colab Environment](01_google_colab_environment_.md), defined *what* objects we want to detect and *where* to find the training data in [Chapter 2: Dataset Configuration (.data, .names, train.txt)](02_dataset_configuration___data___names__train_txt__.md), and configured the *blueprint* for our YOLOv3 model itself in [Chapter 3: YOLOv3 Model Configuration (.cfg)](03_yolov3_model_configuration___cfg__.md).
 
 But who actually *does* the heavy lifting? Who reads these configuration files, processes the images, builds the neural network according to the blueprint, and performs the complex calculations required for training and detection?

@@ -1,5 +1,7 @@
 # Chapter 3: YOLOv3 Model Configuration (.cfg)
 
+> **Historical reference:** The examples in this chapter describe an older two-class notebook and may be incomplete or unsafe to copy verbatim. Use the [current notebook](YOLOv3_Object_Detection.py.ipynb) and [README](README.md) for the maintained, configurable workflow and validation steps.
+
 Welcome back! In [Chapter 1: Google Colab Environment](01_google_colab_environment_.md), we set up our free cloud workspace. In [Chapter 2: Dataset Configuration (.data, .names, train.txt)](02_dataset_configuration___data___names__train_txt__.md), we told the Darknet framework *what* objects to look for and *where* to find the training images.
 
 Now that Darknet knows about our data, it needs the instructions on how to build the actual neural network model that will learn to find those objects. This is where the **YOLOv3 model configuration file**, typically ending with `.cfg`, comes in.

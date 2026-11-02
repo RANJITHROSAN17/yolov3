@@ -1,5 +1,7 @@
 # Chapter 1: Google Colab Environment
 
+> **Historical reference:** The examples in this chapter describe an older two-class notebook and may be incomplete or unsafe to copy verbatim. Use the [current notebook](YOLOv3_Object_Detection.py.ipynb) and [README](README.md) for the maintained, configurable workflow and validation steps.
+
 Welcome to the first chapter of our YOLOv3 object detection tutorial! In this chapter, we'll get started with the platform where we'll be doing all our work: **Google Colab**. Think of it as your free workspace in the cloud, specially equipped for tasks like training powerful neural networks.
 
 ### What is Google Colab and Why Use It?
