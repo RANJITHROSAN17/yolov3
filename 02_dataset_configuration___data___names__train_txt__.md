@@ -1,5 +1,7 @@
 # Chapter 2: Dataset Configuration (.data, .names, train.txt)
 
+> **Historical reference:** The examples in this chapter describe an older two-class notebook and may be incomplete or unsafe to copy verbatim. Use the [current notebook](YOLOv3_Object_Detection.py.ipynb) and [README](README.md) for the maintained, configurable workflow and validation steps.
+
 Welcome back! In [Chapter 1: Google Colab Environment](01_google_colab_environment_.md), we got our powerful workspace set up in the cloud with GPU access and learned how to save our work using Google Drive. Now that we have our environment ready, it's time to tell the YOLOv3 system what we actually want it to find in images and where to find those images.
 
 Think of this chapter as creating the "instruction manual" for our object detection project. Specifically, we need to configure three crucial files: `.data`, `.names`, and `train.txt`. These files tell the Darknet framework (the software that runs YOLOv3) everything it needs to know about the dataset we want to use for training.

@@ -1,5 +1,7 @@
 # Chapter 5: Training Process
 
+> **Historical reference:** The examples in this chapter describe an older two-class notebook and may be incomplete or unsafe to copy verbatim. Use the [current notebook](YOLOv3_Object_Detection.py.ipynb) and [README](README.md) for the maintained, configurable workflow and validation steps.
+
 Welcome back! In our previous chapters, we've set the stage for training our custom object detection model. We configured our workspace in [Chapter 1: Google Colab Environment](01_google_colab_environment_.md), told Darknet about our data and what objects to find in [Chapter 2: Dataset Configuration (.data, .names, train.txt)](02_dataset_configuration___data___names__train_txt__.md), configured the model's blueprint in [Chapter 3: YOLOv3 Model Configuration (.cfg)](03_yolov3_model_configuration___cfg__.md), and prepared the Darknet framework engine itself in [Chapter 4: Darknet Framework](04_darknet_framework_.md).
 
 Now, it's time for the main event: **Training!**
